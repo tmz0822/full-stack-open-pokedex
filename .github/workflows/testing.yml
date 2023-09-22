@@ -27,4 +27,3 @@ jobs:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         if: contains("COMMIT_MESSAGES", "#skip")
         run: echo "this step should be skipped!TEST"
-             echo "$COMMIT_MESSAGES" 
