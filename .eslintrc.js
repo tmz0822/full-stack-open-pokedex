@@ -6,7 +6,11 @@ module.exports = {
     node: true,
     'cypress/globals': true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:cypress/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -29,4 +33,5 @@ module.exports = {
     quotes: 'off',
     semi: 0,
   },
+  ignorePatterns: ['cypress.config.js'],
 };
