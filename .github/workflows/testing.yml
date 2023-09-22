@@ -24,4 +24,4 @@ jobs:
         run: echo "$COMMIT_MESSAGES"
       - name: steps to SKIP
         if: ${{ contains(github.event.head_commit.message, '#skip') }}
-        run: echo "this step should be skipped!TEST"
+        run: echo "this step should be skipped!"
