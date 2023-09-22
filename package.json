@@ -9,7 +9,7 @@
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-    "test:e2e": "cypress open"
+    "test:e2e": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -55,3 +55,4 @@
     "react-router-dom": "^5.2.0"
   }
 }
+
