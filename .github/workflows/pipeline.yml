@@ -34,3 +34,6 @@ jobs:
         with:
           service-id: ${{secrets.RENDER_SERVICE_ID}}
           api-key: ${{secrets.RENDER_API_KEY}}
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.64.0
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
