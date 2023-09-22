@@ -25,5 +25,5 @@ jobs:
       - name: steps to SKIP
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-        if: contains($COMMIT_MESSAGES, "#skip")
+        if: ${{ contains(github.events.commits.*.message), "#skip") }}
         run: echo "this step should be skipped!TEST"
