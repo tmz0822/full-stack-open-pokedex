@@ -45,7 +45,7 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1.0.4
         if: success()
         with:
-          severify: info
+          severity: info
           details: "Deployed successfully"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag_release:
