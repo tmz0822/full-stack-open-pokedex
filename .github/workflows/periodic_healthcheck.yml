@@ -1,0 +1,16 @@
+name: Periodic Healthcheck
+
+on:
+  push:
+    branches:
+      -master
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v3
+        with:
+          url: https://full-stack-open-pokedex-0kum.onrender.com
+          max-attempts: 3
