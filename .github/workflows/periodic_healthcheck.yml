@@ -3,16 +3,12 @@ name: Periodic Healthcheckk
 on:
   push:
     branches:
-      -master
+      - master
 
 jobs:
   healthcheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'   
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v3
         with:
